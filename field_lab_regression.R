@@ -41,3 +41,6 @@ summary(model)
 # residual SE is 13.46 on 540 degrees of freedom; very nice!
 # tight margin of error.
 
+
+
+
