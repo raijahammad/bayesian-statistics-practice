@@ -44,5 +44,26 @@ summary(model)
 # tight margin of error.
 
 
+# accidentally ran the model with LAB length as the response, redo:
+model2 <- lm(TotalLength_FIELD ~ TotalLength_LAB, data = field_lab)
+summary(model2)
+
+# slope is 0.99938 (basically 1), meaning they scale nearly perfectly together
+
+# the p-value is 0.0424 (> 0.05) indicating that the intercept is not
+# statistically significant
+
+# R^2 remains 0.9027 so 90.3% of the variance is explained by the model
+
+# RSE is +/- 14.16 on 540 df, meaning that when you use lab length to predict
+# field length, predictions would be off by +/- 14.16 units
+
+# the major change in this model is in the  residuals:
+# max residual is 295.322, so that one stray point (fin whale) is causing an
+# error of 295.322 units
+
+# model 2 makes more sense
+
+
 
 
